@@ -2,6 +2,7 @@
 
 from flask import Flask
 import os
+import sys 
 
 WHO = os.environ['WHO']
 
@@ -9,7 +10,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-    print("Entring helo")
+    print("Entring helo", file=sys.stdout)
     file1 = open('/opt/app-root/secure/myapp.sec', 'r') 
     Lines = file1.readlines() 
   
