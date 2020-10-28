@@ -15,11 +15,15 @@ def hello_world():
   
     count = 0
     # Strips the newline character 
+    op = ""
     for line in Lines: 
-        print("Secret Line{}: {}".format(count, line.strip())) 
+        op += "Secret Line{}: {}".format(count, line.strip())
         
     if WHO:
-        return WHO
+        if op:
+            return op
+        else:
+            return WHO
     else:
         return 'Hello World!!'
 
