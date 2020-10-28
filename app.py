@@ -15,7 +15,7 @@ def hello_world():
     count = 0
     # Strips the newline character 
     for line in Lines: 
-    print("Secret Line{}: {}".format(count, line.strip())) 
+        print("Secret Line{}: {}".format(count, line.strip())) 
 
     if WHO:
         return "Hello {WHO} ........".format(WHO)
